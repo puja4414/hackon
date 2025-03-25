@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlast Community | Join Our Recycling Movement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --primary-dark: #27ae60;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --danger: #e74c3c;
+            --warning: #f39c12;
+            --bronze: #cd7f32;
+            --silver: #c0c0c0;
+            --gold: #ffd700;
+            --platinum: #e5e4e2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Page Hero */
+        .page-hero {
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .page-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .page-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .page-hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        
+        /* User Milestones */
+        .user-milestones {
+            background-color: white;
+        }
+        
+        .milestones-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 30px;
+        }
+        
+        .user-profile {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+        
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .avatar {
+            position: relative;
+            margin-right: 30px;
+        }
+        
+        .avatar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+        }
+        
+        .level-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: var(--gold);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 3px solid white;
+        }
+        
+        .profile-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .profile-info p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .stats {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .progress-tracker {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .progress-tracker h4 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            border-radius: 10px;
+            width: 0;
+        }
+        
+        .progress-text {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Badge Collection */
+        .badge-collection {
+            margin-top: 30px;
+        }
+        
+        .badge-collection h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .badge-item {
+            background-color: #f8f9fa;
+            border-radius: 20px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            width: calc(50% - 8px);
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        
+        .badge-item.animate-in {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .badge-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .badge-icon {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .badge-bronze .badge-icon { background-color: var(--bronze); }
+        .badge-silver .badge-icon { background-color: var(--silver); }
+        .badge-gold .badge-icon { background-color: var(--gold); }
+        .badge-platinum .badge-icon { background-color: var(--platinum); color: #333; }
+        .badge-green .badge-icon { background-color: var(--primary); }
+        .badge-blue .badge-icon { background-color: var(--secondary); }
+        .badge-purple .badge-icon { background-color: #9b59b6; }
+        
+        .badge-locked {
+            opacity: 0.6;
+            position: relative;
+        }
+        
+        .badge-locked::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255,255,255,0.7);
+            border-radius: 20px;
+        }
+        
+        .locked-icon {
+            margin-left: auto;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        /* Next Badge Preview */
+        .next-badge {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #eee;
+        }
+        
+        .next-badge h4 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .badge-preview {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .badge-preview .badge-item {
+            width: auto;
+            margin: 0;
+        }
+        
+        .badge-preview p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Milestones Grid */
+        .milestones-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .milestone-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .milestone-card.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .milestone-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .milestone-card.achieved {
+            border-left: 5px solid var(--primary);
+        }
+        
+        .milestone-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .milestone-content {
+            flex: 1;
+        }
+        
+        .milestone-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+        
+        .milestone-content p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        /* Leaderboard */
+        .leaderboard {
+            background: #f9f9f9;
+        }
+        
+        .leaderboard-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .table-header {
+            display: flex;
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            padding: 15px 20px;
+        }
+        
+        .table-row {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .table-row.current-user {
+            background: rgba(46, 204, 113, 0.1);
+            font-weight: 600;
+        }
+        
+        .rank, .user, .amount, .badges {
+            flex: 1;
+        }
+        
+        .rank {
+            flex: 0.5;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .user img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .badges {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .badge.gold {
+            background: var(--gold);
+        }
+        
+        .badge.silver {
+            background: var(--silver);
+        }
+        
+        .badge.bronze {
+            background: var(--bronze);
+        }
+        
+        /* Counting animation */
+        .counting {
+            transition: all 1s ease-out;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .avatar {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            .stats {
+                justify-content: center;
+            }
+            
+            .badge-item {
+                width: 100%;
+            }
+            
+            .table-header, .table-row {
+                flex-wrap: wrap;
+            }
+            
+            .rank, .user, .amount, .badges {
+                flex: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Community Hero -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="container">
+            <h1>Join Our Recycling Community</h1>
+            <p>Connect with like-minded individuals and track your recycling milestones</p>
+        </div>
+    </section>
+
+    <!-- User Milestones Section -->
+    <section class="user-milestones">
+        <div class="container">
+            <div class="section-title">
+                <h2>Your Recycling Journey</h2>
+                <p>Track your progress and achievements in plastic recycling</p>
+            </div>
+            
+            <div class="milestones-container">
+                <div class="user-profile">
+                    <div class="profile-header">
+                        <div class="avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User Avatar">
+                            <span class="level-badge">3</span>
+                        </div>
+                        <div class="profile-info">
+                            <h3>Sarah Johnson</h3>
+                            <p>EcoWarrior since June 2022</p>
+                            <div class="stats">
+                                <div class="stat">
+                                    <div class="stat-value counting" data-target="156">0</div>
+                                    <div class="stat-label">Total Recycled (kg)</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value counting" data-target="28">0</div>
+                                    <div class="stat-label">Projects</div>
+                                </div>
+                                <div class="stat">
+                                    <div class="stat-value counting" data-target="12">0</div>
+                                    <div class="stat-label">Badges</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Badge Collection -->
+                            <div class="badge-collection">
+                                <h4>Your Badge Collection</h4>
+                                <div class="badge-container">
+                                    <!-- Recycling Milestone Badges -->
+                                    <div class="badge-item badge-bronze">
+                                        <div class="badge-icon"><i class="fas fa-recycle"></i></div>
+                                        <span>10kg Recycler</span>
+                                    </div>
+                                    <div class="badge-item badge-silver">
+                                        <div class="badge-icon"><i class="fas fa-recycle"></i></div>
+                                        <span>50kg Recycler</span>
+                                    </div>
+                                    <div class="badge-item badge-gold">
+                                        <div class="badge-icon"><i class="fas fa-recycle"></i></div>
+                                        <span>100kg Recycler</span>
+                                    </div>
+                                    
+                                    <!-- Special Achievement Badges -->
+                                    <div class="badge-item badge-green">
+                                        <div class="badge-icon"><i class="fas fa-leaf"></i></div>
+                                        <span>Plastic-Free</span>
+                                    </div>
+                                    <div class="badge-item badge-blue">
+                                        <div class="badge-icon"><i class="fas fa-users"></i></div>
+                                        <span>Community Leader</span>
+                                    </div>
+                                    <div class="badge-item badge-purple">
+                                        <div class="badge-icon"><i class="fas fa-lightbulb"></i></div>
+                                        <span>Innovator</span>
+                                    </div>
+                                    
+                                    <!-- Locked Badges (not yet earned) -->
+                                    <div class="badge-item badge-locked">
+                                        <div class="badge-icon"><i class="fas fa-lock"></i></div>
+                                        <span>200kg Master</span>
+                                        <i class="fas fa-lock locked-icon"></i>
+                                    </div>
+                                    <div class="badge-item badge-locked">
+                                        <div class="badge-icon"><i class="fas fa-home"></i></div>
+                                        <span>EcoHome Builder</span>
+                                        <i class="fas fa-lock locked-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-tracker">
+                        <h4>Current Goal: 200kg Recycling Target</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-progress="78"></div>
+                            <span class="progress-text">0% Complete (0/200kg)</span>
+                        </div>
+                        
+                        <!-- Next Badge Preview -->
+                        <div class="next-badge">
+                            <h4>Next Badge: 200kg Master</h4>
+                            <div class="badge-preview">
+                                <div class="badge-item badge-platinum pulse">
+                                    <div class="badge-icon"><i class="fas fa-trophy"></i></div>
+                                    <span>200kg Master</span>
+                                </div>
+                                <p>Only 44kg more to unlock this prestigious badge!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="milestones-grid">
+                    <div class="milestone-card achieved">
+                        <div class="milestone-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="milestone-content">
+                            <h4>First 10kg Recycled</h4>
+                            <p>Completed on 15 Jun 2022</p>
+                            <span class="badge">Achieved</span>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone-card achieved">
+                        <div class="milestone-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="milestone-content">
+                            <h4>Plastic-Free Month</h4>
+                            <p>Completed on 30 Jul 2022</p>
+                            <span class="badge">Achieved</span>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone-card achieved">
+                        <div class="milestone-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="milestone-content">
+                            <h4>Community Leader</h4>
+                            <p>Helped 5 friends join</p>
+                            <span class="badge">Achieved</span>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone-card">
+                        <div class="milestone-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="milestone-content">
+                            <h4>200kg Recycling Goal</h4>
+                            <p>44kg remaining</p>
+                            <span class="badge">In Progress</span>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone-card">
+                        <div class="milestone-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="milestone-content">
+                            <h4>EcoHome Builder</h4>
+                            <p>Create furniture from recycled plastic</p>
+                            <span class="badge">Not Started</span>
+                        </div>
+                    </div>
+                    
+                    <div class="milestone-card">
+                        <div class="milestone-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="milestone-content">
+                            <h4>Plastic Neutral</h4>
+                            <p>Recycle as much as you use</p>
+                            <span class="badge">Not Started</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Leaderboard -->
+    <section class="leaderboard">
+        <div class="container">
+            <div class="section-title">
+                <h2>Community Leaderboard</h2>
+                <p>Top recyclers this month</p>
+            </div>
+            
+            <div class="leaderboard-table">
+                <div class="table-header">
+                    <div class="rank">Rank</div>
+                    <div class="user">User</div>
+                    <div class="amount">Recycled (kg)</div>
+                    <div class="badges">Badges</div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="rank">1</div>
+                    <div class="user">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                        <span>Michael Chen</span>
+                    </div>
+                    <div class="amount">342kg</div>
+                    <div class="badges">
+                        <span class="badge gold"><i class="fas fa-trophy"></i> 5</span>
+                        <span class="badge"><i class="fas fa-award"></i> 18</span>
+                    </div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="rank">2</div>
+                    <div class="user">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
+                        <span>Priya M.</span>
+                    </div>
+                    <div class="amount">287kg</div>
+                    <div class="badges">
+                        <span class="badge silver"><i class="fas fa-trophy"></i> 3</span>
+                        <span class="badge"><i class="fas fa-award"></i> 15</span>
+                    </div>
+                </div>
+                
+                <div class="table-row">
+                    <div class="rank">3</div>
+                    <div class="user">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User">
+                        <span>Miguel R.</span>
+                    </div>
+                    <div class="amount">256kg</div>
+                    <div class="badges">
+                        <span class="badge bronze"><i class="fas fa-trophy"></i> 2</span>
+                        <span class="badge"><i class="fas fa-award"></i> 12</span>
+                    </div>
+                </div>
+                
+                <div class="table-row current-user">
+                    <div class="rank">12</div>
+                    <div class="user">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                        <span>You (Sarah)</span>
+                    </div>
+                    <div class="amount">156kg</div>
+                    <div class="badges">
+                        <span class="badge"><i class="fas fa-trophy"></i> 1</span>
+                        <span class="badge"><i class="fas fa-award"></i> 12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate counting numbers
+            const animateCounters = () => {
+                const counters = document.querySelectorAll('.counting');
+                const speed = 200; // Lower is faster
+                
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+                    
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(animateCounters, 1);
+                    } else {
+                        counter.innerText = target;
+                    }
+                });
+            };
+            
+            // Animate progress bar
+            const animateProgressBar = () => {
+                const progressFill = document.querySelector('.progress-fill');
+                const progressText = document.querySelector('.progress-text');
+                const targetProgress = progressFill.getAttribute('data-progress');
+                let currentProgress = 0;
+                const totalKg = 200;
+                const increment = targetProgress / 100;
+                
+                const progressInterval = setInterval(() => {
+                    currentProgress += increment;
+                    const currentKg = Math.round((currentProgress / 100) * totalKg);
+                    
+                    progressFill.style.width = `${currentProgress}%`;
+                    progressText.textContent = `${Math.round(currentProgress)}% Complete (${currentKg}/${totalKg}kg)`;
+                    
+                    if (currentProgress >= targetProgress) {
+                        clearInterval(progressInterval);
+                    }
+                }, 20);
+            };
+            
+            // Animate milestones
+            const animateMilestones = () => {
+                const milestones = document.querySelectorAll('.milestone-card');
+                const badges = document.querySelectorAll('.badge-item');
+                
+                milestones.forEach((milestone, index) => {
+                    setTimeout(() => {
+                        milestone.classList.add('animate-in');
+                    }, 200 * index);
+                });
+                
+                badges.forEach((badge, index) => {
+                    setTimeout(() => {
+                        badge.classList.add('animate-in');
+                    }, 100 * index);
+                });
+            };
+            
+            // Pulse animation for next badge
+            const pulseNextBadge = () => {
+                const nextBadge = document.querySelector('.next-badge .badge-item');
+                setInterval(() => {
+                    nextBadge.classList.toggle('pulse');
+                }, 2000);
+            };
+            
+            // Initialize all animations
+            animateCounters();
+            animateProgressBar();
+            animateMilestones();
+            pulseNextBadge();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlast Products | Sustainable Building Materials</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i>
+                EcoPlast
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="recycle.html"><i class="fas fa-trash-alt"></i> Recycle</a></li>
+                    <li><a href="products.html" class="active"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="impact.html"><i class="fas fa-chart-line"></i> Impact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Products Hero -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="container">
+            <h1>Sustainable Building Products</h1>
+            <p>High-quality construction materials made from 100% recycled plastic</p>
+        </div>
+    </section>
+    
+    <!-- Products Filter -->
+    <section class="products-filter">
+        <div class="container">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="category">Category:</label>
+                    <select id="category">
+                        <option value="all">All Products</option>
+                        <option value="bricks">EcoBricks</option>
+                        <option value="lumber">Plastic Lumber</option>
+                        <option value="pavers">EcoPavers</option>
+                        <option value="furniture">Outdoor Furniture</option>
+                        <option value="roofing">Roofing Materials</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sort">Sort By:</label>
+                    <select id="sort">
+                        <option value="popular">Most Popular</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Customer Rating</option>
+                        <option value="newest">Newest Arrivals</option>
+                    </select>
+                </div>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="Search products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Grid -->
+    <section class="products-grid-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="bricks" data-price="2.50" data-rating="4.8">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="EcoBricks">
+                        <div class="product-badge">Best Seller</div>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>EcoBrick Standard</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.8 (124)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$2.50</span>
+                                <span class="original-price">$3.00</span>
+                                <span class="discount">17% off</span>
+                            </div>
+                        </div>
+                        <p>Standard construction brick made from 100% recycled plastic. Lightweight yet durable.</p>
+                        <div class="product-actions">
+                            <button class="btn btn-outline"><i class="far fa-heart"></i> Wishlist</button>
+                            <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-category="lumber" data-price="8.75" data-rating="4.6">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Plastic Lumber">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Plastic Lumber 2x4</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.6 (89)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$8.75</span>
+                                <span class="original-price">$10.00</span>
+                                <span class="discount">13% off</span>
+                            </div>
+                        </div>
+                        <p>Standard 2x4 lumber alternative. Weather-resistant and maintenance-free.</p>
+                        <div class="product-actions">
+                            <button class="btn btn-outline"><i class="far fa-heart"></i> Wishlist</button>
+                            <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-category="pavers" data-price="3.20" data-rating="4.9">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="EcoPavers">
+                        <div class="product-badge">New</div>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>EcoPaver Interlocking</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (156)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$3.20</span>
+                                <span class="original-price">$3.50</span>
+                                <span class="discount">9% off</span>
+                            </div>
+                        </div>
+                        <p>Interlocking pavers for driveways and walkways. Easy to install and durable.</p>
+                        <div class="product-actions">
+                            <button class="btn btn-outline"><i class="far fa-heart"></i> Wishlist</button>
+                            <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-category="furniture" data-price="129.99" data-rating="4.7">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Outdoor Furniture">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Recycled Plastic Bench</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.7 (67)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$129.99</span>
+                                <span class="original-price">$149.99</span>
+                                <span class="discount">13% off</span>
+                            </div>
+                        </div>
+                        <p>Weather-resistant outdoor bench made from 100% recycled plastic. No maintenance required.</p>
+                        <div class="product-actions">
+                            <button class="btn btn-outline"><i class="far fa-heart"></i> Wishlist</button>
+                            <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-category="roofing" data-price="4.75" data-rating="4.5">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Roofing Tiles">
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>EcoTile Roofing</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.5 (42)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$4.75</span>
+                                <span class="original-price">$5.25</span>
+                                <span class="discount">10% off</span>
+                            </div>
+                        </div>
+                        <p>Lightweight roofing tiles made from recycled plastic. UV-resistant and durable.</p>
+                        <div class="product-actions">
+                            <button class="btn btn-outline"><i class="far fa-heart"></i> Wishlist</button>
+                            <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-category="bricks" data-price="3.00" data-rating="4.3">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Decorative Bricks">
+                        <div class="product-badge">Limited Stock</div>
+                        <div class="quick-view">Quick View</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>EcoBrick Decorative</h3>
+                        <div class="product-meta">
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.3 (38)</span>
+                            </div>
+                            <div class="product-price">
+                                <span class="current-price">$3.00</span>
+                                <span class="original-price">$3.75</span>
+                                <span class="discount">20% off</span>
+                            </div>
+                        </div>
+                        <p>Decorative bricks with various patterns and colors for aesthetic applications.</p>
+                        <div class="product-actions">
+                            <button class="btn btn-outline"><i class="far fa-heart"></i> Wishlist</button>
+                            <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Product Quick View Modal -->
+    <div class="quick-view-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-product-view">
+                <div class="modal-product-images">
+                    <div class="main-image">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Thumbnail 1">
+                        <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Thumbnail 2">
+                        <img src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Thumbnail 3">
+                    </div>
+                </div>
+                <div class="modal-product-details">
+                    <h2>EcoBrick Standard</h2>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.8 (124 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">$2.50</span>
+                            <span class="original-price">$3.00</span>
+                            <span class="discount">17% off</span>
+                        </div>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>Our standard EcoBrick is made from 100% recycled plastic waste, providing a sustainable alternative to traditional clay or concrete bricks. These bricks are lightweight yet incredibly durable, with excellent insulation properties.</p>
+                        
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Made from 100% recycled plastic</li>
+                            <li>30% lighter than traditional bricks</li>
+                            <li>Excellent thermal and sound insulation</li>
+                            <li>Water and weather resistant</li>
+                            <li>Easy to install with standard construction techniques</li>
+                            <li>Available in multiple colors</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-specs">
+                        <h3>Specifications:</h3>
+                        <table>
+                            <tr>
+                                <td>Dimensions</td>
+                                <td>8" x 4" x 2.25"</td>
+                            </tr>
+                            <tr>
+                                <td>Weight</td>
+                                <td>1.2 kg</td>
+                            </tr>
+                            <tr>
+                                <td>Material</td>
+                                <td>Recycled HDPE/PP blend</td>
+                            </tr>
+                            <tr>
+                                <td>Color Options</td>
+                                <td>Gray, Red, Brown, Black</td>
+                            </tr>
+                            <tr>
+                                <td>Compressive Strength</td>
+                                <td>15 MPa</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" value="1" min="1">
+                            <button class="qty-btn plus">+</button>
+                        </div>
+                        <button class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn btn-outline"><i class="far fa-heart"></i> Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EcoPlast</h3>
+                    <p>Transforming plastic waste into sustainable urban solutions for a cleaner, greener future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="recycle.html"><i class="fas fa-chevron-right"></i> Recycle</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="community.html"><i class="fas fa-chevron-right"></i> Community</a></li>
+                        <li><a href="impact.html"><i class="fas fa-chevron-right"></i> Impact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Greenway Blvd, EcoCity</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ecoplast.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EcoPlast. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Product filtering
+        const categoryFilter = document.getElementById('category');
+        const sortFilter = document.getElementById('sort');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        function filterProducts() {
+            const category = categoryFilter.value;
+            const sort = sortFilter.value;
+            
+            // Filter by category
+            productCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Convert to array for sorting
+            const visibleProducts = Array.from(productCards).filter(card => 
+                card.style.display !== 'none'
+            );
+            
+            // Sort products
+            visibleProducts.sort((a, b) => {
+                if (sort === 'price-low') {
+                    return parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price'));
+                } else if (sort === 'price-high') {
+                    return parseFloat(b.getAttribute('data-price')) - parseFloat(a.getAttribute('data-price'));
+                } else if (sort === 'rating') {
+                    return parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating'));
+                }
+                return 0;
+            });
+            
+            // Reorder products in DOM
+            const productsGrid = document.querySelector('.products-grid');
+            visibleProducts.forEach(product => {
+                productsGrid.appendChild(product);
+            });
+        }
+        
+        categoryFilter.addEventListener('change', filterProducts);
+        sortFilter.addEventListener('change', filterProducts);
+        
+        // Quick view modal
+        const quickViewBtns = document.querySelectorAll('.quick-view');
+        const quickViewModal = document.querySelector('.quick-view-modal');
+        const closeQuickView = document.querySelector('.quick-view-modal .close-modal');
+        
+        quickViewBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                quickViewModal.style.display = 'flex';
+            });
+        });
+        
+        closeQuickView.addEventListener('click', () => {
+            quickViewModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === quickViewModal) {
+                quickViewModal.style.display = 'none';
+            }
+        });
+        
+        // Quantity selector
+        const minusBtns = document.querySelectorAll('.qty-btn.minus');
+        const plusBtns = document.querySelectorAll('.qty-btn.plus');
+        const quantityInputs = document.querySelectorAll('.quantity-selector input');
+        
+        minusBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const input = btn.nextElementSibling;
+                if (parseInt(input.value) > 1) {
+                    input.value = parseInt(input.value) - 1;
+                }
+            });
+        });
+        
+        plusBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const input = btn.previousElementSibling;
+                input.value = parseInt(input.value) + 1;
+            });
+        });
+    </script>
+</body>
+</html>

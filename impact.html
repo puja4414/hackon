@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlast Impact | Our Environmental Contributions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i>
+                EcoPlast
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="recycle.html"><i class="fas fa-trash-alt"></i> Recycle</a></li>
+                    <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="impact.html" class="active"><i class="fas fa-chart-line"></i> Impact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Impact Hero -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="container">
+            <h1>Our Environmental Impact</h1>
+            <p>See how we're making a difference by transforming plastic waste into valuable resources</p>
+        </div>
+    </section>
+    
+    <!-- Key Metrics -->
+    <section class="key-metrics">
+        <div class="container">
+            <div class="section-title">
+                <h2>By The Numbers</h2>
+                <p>Quantifying our contribution to a more sustainable future</p>
+            </div>
+            
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">1,856</div>
+                    <div class="metric-label">Tons of Plastic Recycled</div>
+                    <div class="metric-description">Equivalent to the weight of 300 elephants</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">54,320</div>
+                    <div class="metric-label">Trees Saved</div>
+                    <div class="metric-description">By replacing wood with recycled plastic products</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">28,500</div>
+                    <div class="metric-label">CO2 Tons Reduced</div>
+                    <div class="metric-description">Compared to traditional manufacturing</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value">$1.2M</div>
+                    <div class="metric-label">Paid to Recyclers</div>
+                    <div class="metric-description">Putting money back into local communities</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Impact Charts -->
+    <section class="impact-charts">
+        <div class="container">
+            <div class="chart-row">
+                <div class="chart-container">
+                    <h3>Plastic Waste Recycled (Monthly)</h3>
+                    <canvas id="wasteChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Product Sales Growth</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="chart-row">
+                <div class="chart-container">
+                    <h3>Plastic Types Processed</h3>
+                    <canvas id="typesChart"></canvas>
+                </div>
+                
+                <div class="chart-container">
+                    <h3>Community Ideas Implemented</h3>
+                    <canvas id="ideasChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sector Impact -->
+    <section class="sector-impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sector-Wide Impact</h2>
+                <p>How recycled plastic is being used across different industries</p>
+            </div>
+            
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Construction</h3>
+                    <p>Our recycled plastic products are used in building materials, insulation, and infrastructure projects.</p>
+                    <div class="sector-stats">
+                        <div class="stat">
+                            <div class="stat-value">42%</div>
+                            <div class="stat-label">Of our products</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Retail</h3>
+                    <p>Consumer products and packaging made from recycled plastic reduce single-use waste.</p>
+                    <div class="sector-stats">
+                        <div class="stat">
+                            <div class="stat-value">28%</div>
+                            <div class="stat-label">Of our products</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Infrastructure</h3>
+                    <p>Road materials, drainage systems, and public furniture made from durable recycled plastic.</p>
+                    <div class="sector-stats">
+                        <div class="stat">
+                            <div class="stat-value">18%</div>
+                            <div class="stat-label">Of our products</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sector-card">
+                    <div class="sector-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Agriculture</h3>
+                    <p>Planters, irrigation systems, and fencing made from weather-resistant recycled materials.</p>
+                    <div class="sector-stats">
+                        <div class="stat">
+                            <div class="stat-value">12%</div>
+                            <div class="stat-label">Of our products</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-title">
+                <h2>Success Stories</h2>
+                <p>Real-world examples of our impact</p>
+            </div>
+            
+            <div class="case-studies-grid">
+                <div class="case-study">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Affordable Housing">
+                    </div>
+                    <div class="case-content">
+                        <h3>Affordable Housing Project</h3>
+                        <p>Partnered with a nonprofit to build 50 affordable homes using our EcoBricks, reducing construction costs by 30% and creating structures that are more durable and energy-efficient.</p>
+                        <div class="case-stats">
+                            <div class="stat">
+                                <div class="stat-value">320</div>
+                                <div class="stat-label">Tons recycled</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$450K</div>
+                                <div class="stat-label">Cost savings</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">85%</div>
+                                <div class="stat-label">Energy reduction</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <div class="case-image">
+                        <img src="https://images.unsplash.com/photo-1606744837616-56c9a5c6a6eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Urban Renewal">
+                    </div>
+                    <div class="case-content">
+                        <h3>Urban Renewal Initiative</h3>
+                        <p>Worked with city planners to replace deteriorating wooden boardwalks and park furniture with recycled plastic alternatives, saving maintenance costs and extending product lifespan.</p>
+                        <div class="case-stats">
+                            <div class="stat">
+                                <div class="stat-value">175</div>
+                                <div class="stat-label">Tons recycled</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">60%</div>
+                                <div class="stat-label">Longer lifespan</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">$120K</div>
+                                <div class="stat-label">Annual savings</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Future Goals -->
+    <section class="future-goals">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Future Goals</h2>
+                <p>Ambitious targets for the next 5 years</p>
+            </div>
+            
+            <div class="goals-grid">
+                <div class="goal-card">
+                    <div class="goal-progress">
+                        <div class="progress-circle" data-progress="65">
+                            <svg>
+                                <circle class="progress-bar" cx="50" cy="50" r="45"></circle>
+                                <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="progress-text">65%</div>
+                        </div>
+                    </div>
+                    <div class="goal-content">
+                        <h3>10,000 Tons Annually</h3>
+                        <p>Increase our plastic recycling capacity to process 10,000 tons per year by 2025.</p>
+                    </div>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-progress">
+                        <div class="progress-circle" data-progress="40">
+                            <svg>
+                                <circle class="progress-bar" cx="50" cy="50" r="45"></circle>
+                                <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="progress-text">40%</div>
+                        </div>
+                    </div>
+                    <div class="goal-content">
+                        <h3>50 Community Centers</h3>
+                        <p>Establish recycling education centers in 50 communities across the country.</p>
+                    </div>
+                </div>
+                
+                <div class="goal-card">
+                    <div class="goal-progress">
+                        <div class="progress-circle" data-progress="25">
+                            <svg>
+                                <circle class="progress-bar" cx="50" cy="50" r="45"></circle>
+                                <circle class="progress-fill" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="progress-text">25%</div>
+                        </div>
+                    </div>
+                    <div class="goal-content">
+                        <h3>Zero Waste Facilities</h3>
+                        <p>Transition all our processing facilities to zero-waste operations by 2026.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EcoPlast</h3>
+                    <p>Transforming plastic waste into sustainable urban solutions for a cleaner, greener future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="recycle.html"><i class="fas fa-chevron-right"></i> Recycle</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="community.html"><i class="fas fa-chevron-right"></i> Community</a></li>
+                        <li><a href="impact.html"><i class="fas fa-chevron-right"></i> Impact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Greenway Blvd, EcoCity</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ecoplast.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EcoPlast. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script>
+        // Waste Chart
+        const wasteCtx = document.getElementById('wasteChart').getContext('2d');
+        const wasteChart = new Chart(wasteCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Tons of Plastic Recycled',
+                    data: [120, 135, 148, 165, 142, 158, 175, 190, 205, 220, 235, 250],
+                    borderColor: '#10B981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.3,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+        
+        // Sales Chart
+        const salesCtx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(salesCtx, {
+            type: 'bar',
+            data: {
+                labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
+                datasets: [{
+                    label: 'Product Sales ($)',
+                    data: [450000, 680000, 920000, 1250000, 1850000, 2400000],
+                    backgroundColor: 'rgba(59, 130, 246, 0.7)',
+                    borderColor: 'rgba(59, 130, 246, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+        
+        // Types Chart
+        const typesCtx = document.getElementById('typesChart').getContext('2d');
+        const typesChart = new Chart(typesCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['PET', 'HDPE', 'PVC', 'LDPE', 'PP', 'PS'],
+                datasets: [{
+                    data: [35, 25, 15, 10, 10, 5],
+                    backgroundColor: [
+                        '#10B981',
+                        '#3B82F6',
+                        '#8B5CF6',
+                        '#EC4899',
+                        '#F59E0B',
+                        '#EF4444'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                    }
+                }
+            }
+        });
+        
+        // Ideas Chart
+        const ideasCtx = document.getElementById('ideasChart').getContext('2d');
+        const ideasChart = new Chart(ideasCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Construction', 'Packaging', 'Furniture', 'Art', 'Agriculture', 'Infrastructure'],
+                datasets: [{
+                    label: 'Community Ideas Implemented',
+                    data: [65, 40, 55, 30, 45, 50],
+                    backgroundColor: 'rgba(16, 185, 129, 0.2)',
+                    borderColor: '#10B981',
+                    pointBackgroundColor: '#10B981',
+                    pointBorderColor: '#fff',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#10B981'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+        
+        // Progress circles animation
+        const progressCircles = document.querySelectorAll('.progress-circle');
+        
+        function animateProgressCircles() {
+            progressCircles.forEach(circle => {
+                const progress = circle.getAttribute('data-progress');
+                const fill = circle.querySelector('.progress-fill');
+                const text = circle.querySelector('.progress-text');
+                
+                const circumference = 2 * Math.PI * 45;
+                const offset = circumference - (progress / 100) * circumference;
+                
+                fill.style.strokeDashoffset = offset;
+                fill.style.strokeDasharray = circumference;
+                
+                // Animate the text count
+                let current = 0;
+                const target = parseInt(progress);
+                const increment = target > 0 ? 1 : -1;
+                const duration = 1000;
+                const stepTime = Math.abs(Math.floor(duration / target));
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    text.textContent = current + '%';
+                    
+                    if (current === target) {
+                        clearInterval(timer);
+                    }
+                }, stepTime);
+            });
+        }
+        
+        // Animate when scrolled into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateProgressCircles();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        const goalsSection = document.querySelector('.future-goals');
+        observer.observe(goalsSection);
+    </script>
+</body>
+</html>

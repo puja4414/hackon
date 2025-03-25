@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recycle Plastic Waste | EcoPlast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-recycle"></i>
+                EcoPlast
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="recycle.html" class="active"><i class="fas fa-trash-alt"></i> Recycle</a></li>
+                    <li><a href="products.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                    <li><a href="community.html"><i class="fas fa-users"></i> Community</a></li>
+                    <li><a href="impact.html"><i class="fas fa-chart-line"></i> Impact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Login</a>
+                <a href="#" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Recycle Hero -->
+    <section class="page-hero" style="background-image: url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80');">
+        <div class="container">
+            <h1>Recycle Your Plastic Waste</h1>
+            <p>Turn your plastic waste into valuable resources and earn money while saving the environment</p>
+        </div>
+    </section>
+    
+    <!-- Plastic Types Section -->
+    <section class="plastic-types">
+        <div class="container">
+            <div class="section-title">
+                <h2>Types of Plastic We Accept</h2>
+                <p>We accept various types of plastic waste for recycling. Click on each type to learn more about how we transform it.</p>
+            </div>
+            
+            <div class="waste-types">
+                <div class="waste-card">
+                    <div class="waste-img">
+                        <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="PET Bottles">
+                        <div class="waste-icon">
+                            <i class="fas fa-wine-bottle"></i>
+                        </div>
+                    </div>
+                    <div class="waste-content">
+                        <h3><i class="fas fa-wine-bottle"></i> PET Bottles</h3>
+                        <p>Clear plastic bottles used for water, soda, and other beverages. Must be clean and dry.</p>
+                        <p class="price">$0.50 per kg</p>
+                        <button class="btn btn-dark btn-video" data-video="https://www.youtube.com/embed/example1">Watch Transformation</button>
+                        <a href="#" class="btn btn-primary">Recycle Now</a>
+                    </div>
+                </div>
+                
+                <div class="waste-card">
+                    <div class="waste-img">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1630&q=80" alt="HDPE Containers">
+                        <div class="waste-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                    </div>
+                    <div class="waste-content">
+                        <h3><i class="fas fa-box"></i> HDPE Containers</h3>
+                        <p>Milk jugs, shampoo bottles, and detergent containers. Must be clean and dry.</p>
+                        <p class="price">$0.45 per kg</p>
+                        <button class="btn btn-dark btn-video" data-video="https://www.youtube.com/embed/example2">Watch Transformation</button>
+                        <a href="#" class="btn btn-primary">Recycle Now</a>
+                    </div>
+                </div>
+                
+                <div class="waste-card">
+                    <div class="waste-img">
+                        <img src="https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="PVC Materials">
+                        <div class="waste-icon">
+                            <i class="fas fa-pipe"></i>
+                        </div>
+                    </div>
+                    <div class="waste-content">
+                        <h3><i class="fas fa-pipe"></i> PVC Materials</h3>
+                        <p>Pipes, window frames, and other construction materials made from PVC.</p>
+                        <p class="price">$0.40 per kg</p>
+                        <button class="btn btn-dark btn-video" data-video="https://www.youtube.com/embed/example3">Watch Transformation</button>
+                        <a href="#" class="btn btn-primary">Recycle Now</a>
+                    </div>
+                </div>
+                
+                <div class="waste-card">
+                    <div class="waste-img">
+                        <img src="https://images.unsplash.com/photo-1585131835010-1b33b3938a3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="LDPE Films">
+                        <div class="waste-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                    </div>
+                    <div class="waste-content">
+                        <h3><i class="fas fa-film"></i> LDPE Films</h3>
+                        <p>Plastic bags, shrink wrap, and other flexible packaging materials.</p>
+                        <p class="price">$0.35 per kg</p>
+                        <button class="btn btn-dark btn-video" data-video="https://www.youtube.com/embed/example4">Watch Transformation</button>
+                        <a href="#" class="btn btn-primary">Recycle Now</a>
+                    </div>
+                </div>
+                
+                <div class="waste-card">
+                    <div class="waste-img">
+                        <img src="https://images.unsplash.com/photo-1583947581924-a6d1c5c72478?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="PP Containers">
+                        <div class="waste-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                    </div>
+                    <div class="waste-content">
+                        <h3><i class="fas fa-utensils"></i> PP Containers</h3>
+                        <p>Yogurt cups, microwave food containers, and other polypropylene items.</p>
+                        <p class="price">$0.38 per kg</p>
+                        <button class="btn btn-dark btn-video" data-video="https://www.youtube.com/embed/example5">Watch Transformation</button>
+                        <a href="#" class="btn btn-primary">Recycle Now</a>
+                    </div>
+                </div>
+                
+                <div class="waste-card">
+                    <div class="waste-img">
+                        <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="PS Products">
+                        <div class="waste-icon">
+                            <i class="fas fa-egg"></i>
+                        </div>
+                    </div>
+                    <div class="waste-content">
+                        <h3><i class="fas fa-egg"></i> PS Products</h3>
+                        <p>Disposable cups, food containers, and packaging foam (Styrofoam).</p>
+                        <p class="price">$0.30 per kg</p>
+                        <button class="btn btn-dark btn-video" data-video="https://www.youtube.com/embed/example6">Watch Transformation</button>
+                        <a href="#" class="btn btn-primary">Recycle Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Modal -->
+    <div class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <iframe id="recycle-video" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Recycling Process -->
+    <section class="recycling-process">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Recycling Process</h2>
+                <p>See how we transform plastic waste into valuable materials</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Collection & Sorting</h3>
+                        <p>We collect plastic waste from homes, businesses, and collection centers, then sort it by type and color.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Cleaning & Shredding</h3>
+                        <p>Plastic is thoroughly cleaned to remove contaminants, then shredded into small flakes.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Melting & Extrusion</h3>
+                        <p>The flakes are melted and extruded into pellets or directly formed into new products.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Manufacturing</h3>
+                        <p>The recycled material is used to create high-quality construction materials and consumer products.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Collection Options -->
+    <section class="collection-options">
+        <div class="container">
+            <div class="section-title">
+                <h2>How to Recycle With Us</h2>
+                <p>Choose the most convenient way to recycle your plastic waste</p>
+            </div>
+            
+            <div class="options-grid">
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h3>Drop-off Centers</h3>
+                    <p>Visit one of our conveniently located collection centers to drop off your sorted plastic waste.</p>
+                    <a href="#" class="btn btn-outline">Find Locations</a>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Scheduled Pickup</h3>
+                    <p>Schedule a pickup for large quantities (minimum 50kg) of plastic waste from your home or business.</p>
+                    <a href="#" class="btn btn-outline">Schedule Now</a>
+                </div>
+                
+                <div class="option-card">
+                    <div class="option-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <h3>Corporate Programs</h3>
+                    <p>Set up a recycling program for your business with regular collections and volume discounts.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EcoPlast</h3>
+                    <p>Transforming plastic waste into sustainable urban solutions for a cleaner, greener future.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="recycle.html"><i class="fas fa-chevron-right"></i> Recycle</a></li>
+                        <li><a href="products.html"><i class="fas fa-chevron-right"></i> Products</a></li>
+                        <li><a href="community.html"><i class="fas fa-chevron-right"></i> Community</a></li>
+                        <li><a href="impact.html"><i class="fas fa-chevron-right"></i> Impact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Greenway Blvd, EcoCity</p>
+                    <p><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@ecoplast.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 EcoPlast. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Video modal functionality
+        const videoBtns = document.querySelectorAll('.btn-video');
+        const videoModal = document.querySelector('.video-modal');
+        const closeModal = document.querySelector('.close-modal');
+        const videoIframe = document.getElementById('recycle-video');
+        
+        videoBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const videoUrl = btn.getAttribute('data-video');
+                videoIframe.src = videoUrl;
+                videoModal.style.display = 'flex';
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            videoIframe.src = '';
+            videoModal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                videoIframe.src = '';
+                videoModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
